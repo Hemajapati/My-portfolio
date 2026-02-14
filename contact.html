@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a class="logo" href="index.html">Hemaja Pati</a>
+            <ul class="nav-links">
+                <li><a class="nav-link" href="index.html">Home</a></li>
+                <li><a class="nav-link" href="about.html">About</a></li>
+                <li><a class="nav-link" href="education.html">Education</a></li>
+                <li><a class="nav-link" href="skills.html">Skills</a></li>
+                <li><a class="nav-link" href="projects.html">Projects</a></li>
+                <li><a class="nav-link" href="resume.html">Resume</a></li>
+                <li><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            
+            <div class="contact-wrapper glass">
+                <form id="contact-form" onsubmit="event.preventDefault(); showToast('Message Sent Successfully!');">
+                    
+                    <!-- Name Field -->
+                    <div class="form-group">
+                        <input type="text" class="form-input" required autocomplete="off">
+                        <label class="form-label">Your Name</label>
+                    </div>
+
+                    <!-- Email Field -->
+                    <div class="form-group">
+                        <input type="email" class="form-input" required autocomplete="off">
+                        <label class="form-label">Your Email</label>
+                    </div>
+
+                    <!-- Message Field (Using Textarea for better UX) -->
+                    <div class="form-group">
+                        <textarea class="form-input" rows="1" required oninput="this.style.height = ''; this.style.height = this.scrollHeight + 'px'"></textarea>
+                        <label class="form-label">Message</label>
+                    </div>
+
+                    <button type="submit" class="btn-full">Send Message</button>
+                </form>
+            </div>
+            
+            <!-- Social Links -->
+            <div class="social-links" style="margin-top: 40px;">
+                <a href="https://github.com" target="_blank" class="social-icon glass">GH</a>
+                <a href="https://linkedin.com" target="_blank" class="social-icon glass">LI</a>
+        
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="margin-top: 50px; padding: 20px 0; text-align: center; border-top: 1px solid var(--glass-border);">
+        <div class="container">
+            <p>&copy;hemajapati.</p>
+        </div>
+    </footer>
+
+    <!-- Toast Notification Script (Simple alert replacement) -->
+    <script>
+        function showToast(message) {
+            // Simple alert for now, or you can create a div
+            alert(message);
+            // Reset form
+            document.getElementById('contact-form').reset();
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
